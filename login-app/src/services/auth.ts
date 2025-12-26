@@ -1,21 +1,23 @@
+// src/services/auth.ts
 import axios from 'axios';
 import { AuthResponse } from '../types';
 
-const API_URL = 'https://your-api-url.com/api'; // Replace with your actual API URL
+const API_URL = 'http://localhost:5000/api';
 
 export const login = async (username: string, password: string): Promise<AuthResponse> => {
     try {
         const response = await axios.post(`${API_URL}/login`, { username, password });
         return response.data;
     } catch (error) {
-        throw new Error('Login failed. Please check your credentials.');
+        throw new Error('Login failed.');
     }
 };
 
-export const logout = async (): Promise<void> => {
+// --- THIS PART IS CRITICAL FOR REGISTRATION ---
+export const register = async (username: string, password: string, email: string): Promise<void> => {
     try {
-        await axios.post(`${API_URL}/logout`);
+        await axios.post(`${API_URL}/register`, { username, password, email });
     } catch (error) {
-        throw new Error('Logout failed. Please try again.');
+        throw new Error('Registration failed.');
     }
 };

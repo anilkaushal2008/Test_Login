@@ -1,0 +1,17 @@
+{
+  "name": "login-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "testcafe": "3.7.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}

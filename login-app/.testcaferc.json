@@ -1,0 +1,17 @@
+{
+  "browsers": [
+    "chrome"
+  ],
+  "src": "tests/e2e/testcafe/**/*.test.ts",
+  "reporter": {
+    "name": "spec"
+  },
+  "screenshots": {
+    "path": "screenshots/",
+    "takeOnFails": true
+  },
+  "video": {
+    "path": "videos/",
+    "failedOnly": true
+  }
+}
